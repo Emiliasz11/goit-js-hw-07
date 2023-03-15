@@ -1,14 +1,13 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-console.log(galleryItems);
 const  gallery= document.querySelector(".gallery");
 galleryItems.forEach((item)=> {
-    const galletyItem=`<div class="gallery__item">
-          <a class="gallery__link" href=${item.original}">
+    const galletyItem=`
+          <a class="gallery__item" href=${item.original}">
           <img class="gallery__image"
           src="${item.preview}"
           data-source="${item.original}"
-          alt="${item.description}"/></img></a></div>`;
+          alt="${item.description}"/></img></a>`;
           gallery.insertAdjacentHTML("beforeend", galletyItem);
 
      gallery.onclick= (event)=>{
@@ -30,5 +29,4 @@ galleryItems.forEach((item)=> {
         };
     
     });
-
 
