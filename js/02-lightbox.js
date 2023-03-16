@@ -10,9 +10,8 @@ const images = galleryItems.map(
 src="${image.preview}" 
 alt="${image.description}" />
 </a>`
-  )
-  .join("");
-    console.log(images)
+  ).join("");
+   
 gallery.insertAdjacentHTML("afterbegin", images);
 
 new SimpleLightbox(".gallery a", {
